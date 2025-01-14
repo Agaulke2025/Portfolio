@@ -1,0 +1,4 @@
+.text-primary-on-hover {
+  color: black !important; /* Bootstrap's primary color */
+  font-weight: bold; /* Optional */
+}
