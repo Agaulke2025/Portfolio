@@ -10,7 +10,7 @@ export class Tag {
   static readonly CSS = new Tag("CSS", "lightgreen");
   static readonly HTML = new Tag("HTML", "black");
 
-  private constructor(private readonly key: string, public readonly color: string) {
+  private constructor(private readonly key: string, public readonly color: string, ) {
 
   }
   toString() {

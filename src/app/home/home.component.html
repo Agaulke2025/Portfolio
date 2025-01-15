@@ -4,8 +4,12 @@
     <div class="col-lg shadow border m-1">
       <div class="text-center">
         <h2>About Me</h2>
-        <img src="../../assets/alexey.png" class="rounded-circle" alt="profile picture" width="250" height="250">
-        <p>My name is Alexey Gaulke and I am a software developer. I have a passion for creating software that is both functional and user-friendly. I have experience with a variety of programming languages and frameworks, and I am always looking to learn new technologies. I am currently seeking new opportunities to further develop my skills and contribute to exciting projects.</p>
+        <img src="../../assets/alexey.png" class="rounded-circle" alt="profile picture" width="300" height="250">
+        <p>I am a recent graduate from The Ohio State University with a degree in Computer and Information Science. I thrive in technical and collaborative environments, excelling in adaptability and dependability to meet goals and deadlines.
+
+          From May 2023 to July 2024, I worked as a Software Development Intern at The Toro Company, delivering a FOTA solution, implementing RPC calls, and developing a health monitoring system for microservices in an Agile environment. My professional experience also includes nearly three years in customer service roles at L & A Precision Lawn and Landscape and Archer's Tavern.
+          
+          At OSU, I served as a Teaching Assistant for the Software Components course, where I graded assignments and assisted students with complex software problems. Additionally, I was President of the Rock Climbing Club, managing risk assessment, acting as a liaison to external organizations, and coordinating event timelines.</p>
       </div>
     </div>
     <!--Featured Project-->
@@ -14,6 +18,13 @@
         <h2>Featured Project</h2>
         <h4>{{featuredProject.name}}</h4>
       </div>
+      <carousel>
+        <slide *ngFor="let image of featuredProject.pictures">
+          <img [src]="image" style="display: block; width: 100%;" alt="...">
+        </slide>
+      </carousel>
+      <p class="mt-2">{{featuredProject.summary}}</p>
+      <p>Visit the Portfolio section to learn more!</p>
     </div>
   </div>
 </div>

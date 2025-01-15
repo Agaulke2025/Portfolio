@@ -1,1 +1,149 @@
-<p>resume works!</p>
+<div class="container text-center">
+  <button class="btn btn-primary mb-5 shadow border" (click)="DownloadResume()">Download PDF Resume</button>
+
+  <div class="pb-2">
+    <accordion [isAnimated]="true" class="shadow">
+      <accordion-group [(isOpen)]="isWorkExperienceOpen">
+        <button accordion-heading class="btn btn-block justify-content-between d-flex w-100">
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Work Experience</div>
+          <div style="width:10.95px;">
+            <div *ngIf="!isWorkExperienceOpen" style="color: white;">></div>
+            <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Personal Service Technician (1/25 - Present)</h2>
+          <h3 class="text-primary">Breeze Rentals</h3>
+          <ul>
+            <li>Maintained organization and cleanliness of rental inventory, performing routine checks to ensure equipment safety and functionality.</li>
+            <li>Delivered exceptional customer service by addressing inquiries, explaining rental policies, and providing recommendations for equipment based on skill level and preferences.</li>
+          </ul>
+        </div>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Robotics Software Development Intern (5/23 - 7/24)</h2>
+          <h3 class="text-primary">The Toro Company</h3>
+          <ul>
+            <li>Development of Pub/Sub calls over RPC for several autonomous products being developed using Java OOP methods and unit testing.</li>
+            <li>Implemented a health monitoring system for various micro services in order to improve disaster recovery time.</li>
+            <li>Integration of FOTA (firmware over the air) updates for robots using python, pycURL, and docker through asynchronous and OOP methods.</li>
+            <li>Involvement in daily sprint stand-ups, planning, retrospections, and quarterly production plannings.</li>
+          </ul>
+        </div>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Teaching Assistant Software Components (8/22 - 4/23)</h2>
+          <h3 class="text-primary">The Ohio State University</h3>
+          <ul>
+            <li>Encouraged the development of students through clarification and instruction on complex problems.</li>
+          </ul>
+        </div>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Landscape Technician (4/21 - 8/22)</h2>
+          <h3 class="text-primary">L & A Precision Lawn and Landscape</h3>
+          <ul>
+            <li>Worked on customers properties by mulching, trimming bushes, cutting lawns, etc.</li>
+          </ul>
+        </div>
+        <div style="text-align: left;">
+          <h2 class="mb-0">To-Go Member (9/19 - 12/20)</h2>
+          <h3 class="text-primary">Archer's Tavern</h3>
+          <ul>
+            <li>Oversaw the execution and verified the accuracy of takeout orders while managing customer relations.</li>
+          </ul>
+        </div>
+      </accordion-group>
+    
+      
+      <accordion-group [(isOpen)]="isEducationOpen">
+        <button accordion-heading class="btn btn-block justify-content-between d-flex w-100">
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Education</div>
+          <div style="width:10.95px;">
+            <div *ngIf="!isEducationOpen" style="color: white;">></div>
+            <div *ngIf="isEducationOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Bachelor of Science in Computer Information and Science</h2>
+          <h3 class="text-primary">The Ohio State University</h3>
+          <ul>
+            <li>Graduated December 2024 (Summa Cum Laude, GPA: 3.94)</li>
+            <li>Relevant Coursework: Capstone Design: Information Systems, Information Security, Principle of Programming Languages, Advanced DBMS, Software Requirements Analysis, Computer Networking, Database Systems, Project: Design and Development of Web Apps., Intro to OS.</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isCertificationsOpen">
+        <button accordion-heading class="btn btn-block justify-content-between d-flex w-100">
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Certifications</div>
+          <div style="width:10.95px;">
+            <div *ngIf="!isCertificationsOpen" style="color: white;">></div>
+            <div *ngIf="isCertificationsOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <div style="text-align: left;">
+          <h2 class="mb-0">AWS Certified Cloud Practinioner (10/24 - 10/27)</h2>
+          <h3 class="text-primary">Amazon Web Services</h3>
+          <ul>
+            <li>Demonstrated knowledge of core AWS services, cloud concepts, and architectural best practices.</li>
+            <li>Ability to identify AWS solutions for common use cases, including storage, networking, compute, and databases.</li>
+            <li>Understanding of AWS security and compliance fundamentals including IAM (Identity and Access Management).</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isPhilanthropyOpen">
+        <button accordion-heading class="btn btn-block justify-content-between d-flex w-100">
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Philanthropy & Accolades</div>
+          <div style="width:10.95px;">
+            <div *ngIf="!isPhilanthropyOpen" style="color: white;">></div>
+            <div *ngIf="isPhilanthropyOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Volunteer (1/22 - 4/23)</h2>
+          <h3 class="text-primary">Food Recover Network</h3>
+          <ul>
+            <li>Assisted in the distribution of perishable foods from dining locations to benefit the homeless community.</li>
+          </ul>
+        </div>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Eagle Scout Award (2/18 - Present)</h2>
+          <h3 class="text-primary">Boy Scouts of America</h3>
+          <ul>
+            <li>Meticulously planned, designed, and executed the installation of nature display boxes at Cowan Lake SP.</li>
+            <li>Served in a variety of leadership roles that enabled the continued fluidity and stabilization of the troop.</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isLeadershipOpen">
+        <button accordion-heading class="btn btn-block justify-content-between d-flex w-100">
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Leadership & Involvement</div>
+          <div style="width:10.95px;">
+            <div *ngIf="!isLeadershipOpen" style="color: white;">></div>
+            <div *ngIf="isLeadershipOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <div style="text-align: left;">
+          <h2 class="mb-0">President & Vice President (4/22 - 4/24)</h2>
+          <h3 class="text-primary">Rock Climbing Club at Ohio State</h3>
+          <ul>
+            <li>Coordinated of 5 officers, triweekly practices, monthly meetings, events, and merchandise orders.</li>
+            <li>Planned overarching club objectives and serve as a liaison between the club and Ohio State.</li>
+          </ul>
+        </div>
+        <div style="text-align: left;">
+          <h2 class="mb-0">Senior Patrol Leader (8/18 - 2/19)</h2>
+          <h3 class="text-primary">The Boy Scouts of America</h3>
+          <ul>
+            <li>Coordinated organization of events and evaluation of risk assessment practices of the 50-person troop.</li>
+          </ul>
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+  
+</div>
+
+
