@@ -19,6 +19,7 @@ export class PortfolioComponent implements OnInit {
   bootstrap = false;
   html = false;
   css = false;
+  huggingFace = false;
   
 
   isCollapsed = true;
@@ -54,7 +55,10 @@ export class PortfolioComponent implements OnInit {
     if(this.css){
       filterTags.push(Tag.CSS);
     }
-    if (this.typescript || this.angular){
+    if(this.huggingFace){
+      filterTags.push(Tag.HUGGINGFACE);
+    }
+    if (this.typescript || this.angular || this.java || this.mySql || this.bootstrap || this.html || this.css || this.huggingFace){
       this.filtering = true;
     }
     else{
@@ -70,6 +74,7 @@ export class PortfolioComponent implements OnInit {
     this.bootstrap = false;
     this.html = false;
     this.css = false;
+    this.huggingFace = false;
     this.projects = this.projectService.getProjects();
     this.filtering = false;
   }

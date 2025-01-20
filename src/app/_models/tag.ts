@@ -9,6 +9,7 @@ export class Tag {
   static readonly BOOTSTRAP = new Tag("Bootstrap", "lightblue");
   static readonly CSS = new Tag("CSS", "lightgreen");
   static readonly HTML = new Tag("HTML", "black");
+  static readonly HUGGINGFACE = new Tag("Huggingface", "pink");
 
   private constructor(private readonly key: string, public readonly color: string, ) {
 
